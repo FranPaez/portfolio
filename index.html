@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <link rel="icon" href="./assets/images/icon.png">
+
+    <meta
+        name="description"
+        content="Portfolio profesional de Franco Paez, Data Analyst especializado en análisis de datos, Business Intelligence, SQL y visualización."
+    >
+
+    <title>Franco Paez | Data Analyst</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+    <a class="skip-link" href="#main-content">
+        Saltar al contenido principal
+    </a>
+
+    <div class="app-layout">
+
+        <!-- -- SIDEBAR -- -->
+        <aside class="sidebar" aria-label="Navegación principal">
+            <header class="sidebar__header">
+                <a class="sidebar__identity" href="#inicio">
+                    <span class="sidebar__name">
+                        Franco Paez
+                    </span>
+
+                    <span class="sidebar__role">
+                        Data Analyst
+                    </span>
+                </a>
+            </header>
+
+            <nav
+                class="sidebar__navigation"
+                aria-label="Secciones del portfolio"
+            >
+                <ul class="sidebar__menu">
+                    <li>
+                        <a
+                            class="sidebar__link sidebar__link--active"
+                            href="#inicio"
+                            aria-current="page"
+                        >
+                            <span
+                                class="sidebar__icon"
+                                aria-hidden="true"
+                            >
+                                <img
+                                    src="./assets/icons/house.svg"
+                                    alt=""
+                                >
+                            </span>
+
+                            <span class="sidebar__label">
+                                Inicio
+                            </span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a
+                            class="sidebar__link"
+                            href="#perfil"
+                        >
+                            <span
+                                class="sidebar__icon"
+                                aria-hidden="true"
+                            >
+                                <img
+                                    src="./assets/icons/graduation-cap.svg"
+                                    alt=""
+                                >
+                            </span>
+
+                            <span class="sidebar__label">
+                                Formación
+                            </span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a
+                            class="sidebar__link"
+                            href="#proyectos"
+                        >
+                            <span
+                                class="sidebar__icon"
+                                aria-hidden="true"
+                            >
+                                <img
+                                    src="./assets/icons/folder.svg"
+                                    alt=""
+                                >
+                            </span>
+
+                            <span class="sidebar__label">
+                                Proyectos
+                            </span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a
+                            class="sidebar__link"
+                            href="#contacto"
+                        >
+                            <span
+                                class="sidebar__icon"
+                                aria-hidden="true"
+                            >
+                                <img
+                                    src="./assets/icons/user-round.svg"
+                                    alt=""
+                                >
+                            </span>
+
+                            <span class="sidebar__label">
+                                Contacto
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <footer class="sidebar__footer">
+                <a
+                    class="sidebar__cv-link"
+                    href="./assets/documents/franco_paez.pdf"
+                    download
+                >
+                    Descargar CV
+                </a>
+
+                <ul class="sidebar__social-list">
+                    <li>
+    <a
+        class="sidebar__social-link"
+        href="https://www.linkedin.com/in/franco-paez-852143271/"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+        <span
+            class="sidebar__social-icon"
+            aria-hidden="true"
+        >
+            <img
+                src="./assets/icons/briefcase-business.svg"
+                alt=""
+            >
+        </span>
+
+        <span class="sidebar__social-label">
+            LinkedIn
+        </span>
+    </a>
+</li>
+
+                    <li>
+    <a
+        class="sidebar__social-link"
+        href="https://github.com/FranPaez"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+        <span
+            class="sidebar__social-icon"
+            aria-hidden="true"
+        >
+            <img
+                src="./assets/icons/code-xml.svg"
+                alt=""
+            >
+        </span>
+
+        <span class="sidebar__social-label">
+            GitHub
+        </span>
+    </a>
+</li>
+
+<li>
+    <a
+        class="sidebar__social-link"
+        href="mailto:francoleonelpaez@gmail.com"
+    >
+        <span
+            class="sidebar__social-icon"
+            aria-hidden="true"
+        >
+            <img
+                src="./assets/icons/mail.svg"
+                alt=""
+            >
+        </span>
+
+        <span class="sidebar__social-label">
+            Correo
+        </span>
+    </a>
+</li>
+                </ul>
+            </footer>
+        </aside>
+
+        <!-- -- CONTENIDO PRINCIPAL -- -->
+        <main id="main-content" class="main-content">
+
+            <!-- -- PRESENTACIÓN -- -->
+            <section
+                class="intro section"
+                aria-label="Presentación profesional"
+            >
+
+                <!-- -- HERO -- -->
+                <div id="inicio" class="hero">
+                    <p class="eyebrow">
+                        Data Analyst
+                    </p>
+
+                    <h1 class="hero__title">
+                        Franco Paez
+                    </h1>
+
+                    <p class="hero__description">
+                        Data Analyst enfocado en construir proyectos de análisis de datos que integran SQL, 
+                        Business Intelligence, visualización y documentación técnica.
+                    </p>
+
+                    <div class="hero__actions">
+                        <a
+                            class="button button--primary"
+                            href="#proyectos"
+                        >
+                            Ver proyectos
+                        </a>
+
+                        <a
+                            class="button button--secondary"
+                            href="./assets/documents/franco_paez.pdf"
+                            download
+                        >
+                            Descargar CV
+                        </a>
+                    </div>
+                </div>
+
+                <!-- -- SOBRE MÍ -- -->
+                <article class="about-summary">
+                    <p class="eyebrow">
+                        Perfil profesional
+                    </p>
+
+                    <h2 class="about-summary__title">
+                        Sobre mí
+                    </h2>
+
+                    <p class="about-summary__description">
+                        Me interesa desarrollar proyectos que recorran todo el proceso analítico, 
+                        desde el diseño del modelo de datos hasta la visualización y comunicación de resultados. 
+                        Disfruto estructurar información, documentar decisiones y construir soluciones que combinen 
+                        análisis técnico con una perspectiva de negocio.
+                    </p>
+                </article>
+            </section>
+
+            <!-- -- PERFIL PROFESIONAL -- -->
+            <section
+                class="profile section"
+                aria-label="Formación y herramientas"
+            >
+
+                <!-- -- FORMACIÓN -- -->
+                <article id="perfil" class="profile-panel">
+                    <header class="profile-panel__header">
+                        <p class="eyebrow">
+                            Formación
+                        </p>
+
+                        <h2 class="profile-panel__title">
+                            Estudios relevantes
+                        </h2>
+                    </header>
+
+                    <ul class="education-list">
+                        <li class="education-item">
+                            <div>
+                                <h3 class="education-item__title">
+                                    Tecnicatura en Programación
+                                </h3>
+
+                                <p class="education-item__institution">
+                                    Universidad Tecnológica Nacional
+                                </p>
+                            </div>
+
+                            <span class="status-badge">
+                                En curso
+                            </span>
+                        </li>
+
+                        <li class="education-item">
+                            <div>
+                                <h3 class="education-item__title">
+                                    Curso de Data Science
+                                </h3>
+
+                                <p class="education-item__institution">
+                                    Universidad Tecnológica Nacional
+                                </p>
+                            </div>
+
+                            <span class="status-badge">
+                                En curso
+                            </span>
+                        </li>
+                    </ul>
+                </article>
+
+                <!-- -- SKILLS -- -->
+                <article class="profile-panel">
+                    <header class="profile-panel__header">
+                        <p class="eyebrow">
+                            Skills
+                        </p>
+
+                        <h2 class="profile-panel__title">
+                            Herramientas principales
+                        </h2>
+                    </header>
+
+                    <ul class="skills-grid">
+                        <li
+                            class="skill-card"
+                            data-skill="excel"
+                        >
+                            <img
+                                class="skill-card__image"
+                                src="./assets/images/excel.png"
+                                alt=""
+                            >
+
+                            <span class="skill-card__label">
+                                Excel
+                            </span>
+                        </li>
+
+                        <li
+                            class="skill-card"
+                            data-skill="sql"
+                        >
+                            <img
+                                class="skill-card__image"
+                                src="./assets/images/sql.png"
+                                alt=""
+                            >
+
+                            <span class="skill-card__label">
+                                SQL
+                            </span>
+                        </li>
+
+                        <li
+                            class="skill-card"
+                            data-skill="mysql"
+                        >
+                            <img
+                                class="skill-card__image"
+                                src="./assets/images/mysql.png"
+                                alt=""
+                            >
+
+                            <span class="skill-card__label">
+                                MySQL
+                            </span>
+                        </li>
+
+                        <li
+                            class="skill-card"
+                            data-skill="powerbi"
+                        >
+                            <img
+                                class="skill-card__image"
+                                src="./assets/images/powerbi.png"
+                                alt=""
+                            >
+
+                            <span class="skill-card__label">
+                                Power BI
+                            </span>
+                        </li>
+
+                        <li
+                            class="skill-card"
+                            data-skill="python"
+                        >
+                            <img
+                                class="skill-card__image"
+                                src="./assets/images/python.png"
+                                alt=""
+                            >
+
+                            <span class="skill-card__label">
+                                Python
+                            </span>
+                        </li>
+                    </ul>
+                </article>
+            </section>
+
+            <!-- -- PROYECTOS -- -->
+            <section
+                id="proyectos"
+                class="projects section"
+                aria-labelledby="projects-title"
+            >
+                <header class="section-header">
+                    <p class="eyebrow">
+                        Trabajo destacado
+                    </p>
+
+                    <h2
+                        id="projects-title"
+                        class="section-header__title"
+                    >
+                        Proyectos
+                    </h2>
+                </header>
+
+                <article class="featured-project">
+                    <figure class="featured-project__media">
+                        <img
+                            class="featured-project__image"
+                            src="./assets/images/executive-dashboard.png"
+                            alt="Vista principal del dashboard Hartseer Analytics"
+                        >
+                    </figure>
+
+                    <div class="featured-project__content">
+                        <header>
+                            <p class="eyebrow">
+                                Business Intelligence
+                            </p>
+
+                            <h3 class="featured-project__title">
+                                Hartseer Analytics
+                            </h3>
+                        </header>
+
+                        <p class="featured-project__description">
+                            Proyecto de Business Intelligence desarrollado para simular un entorno de análisis empresarial, 
+                            integrando modelado de datos, SQL, dashboards interactivos y 
+                            documentación técnica en un mismo proyecto.
+                        </p>
+
+                        <ul
+                            class="technology-list"
+                            aria-label="Tecnologías utilizadas"
+                        >
+                            <li>SQL</li>
+                            <li>MySQL</li>
+                            <li>Power BI</li>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                        </ul>
+
+                        <div class="featured-project__actions">
+                            <a
+                                class="button button--primary"
+                                href="https://franpaez.github.io/hartseer-analytics/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                Live Demo
+                            </a>
+
+                            <a
+                                class="button button--secondary"
+                                href="https://github.com/FranPaez/hartseer-analytics/tree/main"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                GitHub
+                            </a>
+
+                            <a
+                                class="button button--secondary"
+                                href="https://github.com/FranPaez/hartseer-analytics/blob/main/analytics/documentation/Hartseer_Analytics_Documentation.pdf"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                Documentación
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </section>
+
+            <!-- -- CONTACTO -- -->
+            <section
+                id="contacto"
+                class="contact section"
+                aria-labelledby="contact-title"
+            >
+                <div>
+                    <p class="eyebrow">
+                        Contacto
+                    </p>
+
+                    <h2
+                        id="contact-title"
+                        class="contact__title"
+                    >
+                        ¿Querés conversar?
+                    </h2>
+
+                    <p class="contact__description">
+                        Estoy abierto a oportunidades como Data Analyst.
+                    </p>
+                </div>
+
+                <div class="contact__actions">
+<a
+    class="button button--primary"
+    href="mailto:francoleonelpaez@gmail.com"
+>
+    Enviar correo
+</a>
+
+                    <a
+                        class="button button--secondary"
+                        href="https://www.linkedin.com/in/franco-paez-852143271/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        LinkedIn
+                    </a>
+
+                    <a
+                        class="button button--secondary"
+                        href="https://github.com/FranPaez"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        GitHub
+                    </a>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="./js/app.js"></script>
+</body>
+</html>
