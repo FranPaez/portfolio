@@ -934,6 +934,7 @@ p {
     align-items: center;
 
     padding: var(--space-5);
+    margin-bottom: var(--space-6);
 
     border-radius: var(--radius-lg);
     overflow: hidden;
