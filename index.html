@@ -84,6 +84,27 @@
                     <li>
                         <a
                             class="sidebar__link"
+                            href="#proyectos"
+                        >
+                            <span
+                                class="sidebar__icon"
+                                aria-hidden="true"
+                            >
+                                <img
+                                    src="./assets/icons/folder.svg"
+                                    alt=""
+                                >
+                            </span>
+
+                            <span class="sidebar__label">
+                                Proyectos
+                            </span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a
+                            class="sidebar__link"
                             href="#perfil"
                         >
                             <span
@@ -105,20 +126,20 @@
                     <li>
                         <a
                             class="sidebar__link"
-                            href="#proyectos"
+                            href="#certificados"
                         >
                             <span
                                 class="sidebar__icon"
                                 aria-hidden="true"
                             >
                                 <img
-                                    src="./assets/icons/folder.svg"
+                                    src="./assets/icons/award.svg"
                                     alt=""
                                 >
                             </span>
 
                             <span class="sidebar__label">
-                                Proyectos
+                                Certificados
                             </span>
                         </a>
                     </li>
@@ -287,151 +308,7 @@
                 </article>
             </section>
 
-            <!-- -- PERFIL PROFESIONAL -- -->
-            <section
-                class="profile section"
-                aria-label="Formación y herramientas"
-            >
-
-                <!-- -- FORMACIÓN -- -->
-                <article id="perfil" class="profile-panel">
-                    <header class="profile-panel__header">
-                        <p class="eyebrow">
-                            Formación
-                        </p>
-
-                        <h2 class="profile-panel__title">
-                            Estudios relevantes
-                        </h2>
-                    </header>
-
-                    <ul class="education-list">
-                        <li class="education-item">
-                            <div>
-                                <h3 class="education-item__title">
-                                    Tecnicatura en Programación
-                                </h3>
-
-                                <p class="education-item__institution">
-                                    Universidad Tecnológica Nacional
-                                </p>
-                            </div>
-
-                            <span class="status-badge">
-                                En curso
-                            </span>
-                        </li>
-
-                        <li class="education-item">
-                            <div>
-                                <h3 class="education-item__title">
-                                    Curso de Data Science
-                                </h3>
-
-                                <p class="education-item__institution">
-                                    Universidad Tecnológica Nacional
-                                </p>
-                            </div>
-
-                            <span class="status-badge">
-                                En curso
-                            </span>
-                        </li>
-                    </ul>
-                </article>
-
-                <!-- -- SKILLS -- -->
-                <article class="profile-panel">
-                    <header class="profile-panel__header">
-                        <p class="eyebrow">
-                            Skills
-                        </p>
-
-                        <h2 class="profile-panel__title">
-                            Herramientas principales
-                        </h2>
-                    </header>
-
-                    <ul class="skills-grid">
-                        <li
-                            class="skill-card"
-                            data-skill="excel"
-                        >
-                            <img
-                                class="skill-card__image"
-                                src="./assets/images/excel.png"
-                                alt=""
-                            >
-
-                            <span class="skill-card__label">
-                                Excel
-                            </span>
-                        </li>
-
-                        <li
-                            class="skill-card"
-                            data-skill="sql"
-                        >
-                            <img
-                                class="skill-card__image"
-                                src="./assets/images/sql.png"
-                                alt=""
-                            >
-
-                            <span class="skill-card__label">
-                                SQL
-                            </span>
-                        </li>
-
-                        <li
-                            class="skill-card"
-                            data-skill="mysql"
-                        >
-                            <img
-                                class="skill-card__image"
-                                src="./assets/images/mysql.png"
-                                alt=""
-                            >
-
-                            <span class="skill-card__label">
-                                MySQL
-                            </span>
-                        </li>
-
-                        <li
-                            class="skill-card"
-                            data-skill="powerbi"
-                        >
-                            <img
-                                class="skill-card__image"
-                                src="./assets/images/powerbi.png"
-                                alt=""
-                            >
-
-                            <span class="skill-card__label">
-                                Power BI
-                            </span>
-                        </li>
-
-                        <li
-                            class="skill-card"
-                            data-skill="python"
-                        >
-                            <img
-                                class="skill-card__image"
-                                src="./assets/images/python.png"
-                                alt=""
-                            >
-
-                            <span class="skill-card__label">
-                                Python
-                            </span>
-                        </li>
-                    </ul>
-                </article>
-            </section>
-
-            <!-- -- PROYECTOS -- -->
+                        <!-- -- PROYECTOS -- -->
             <section
                 id="proyectos"
                 class="projects section"
@@ -486,6 +363,8 @@
                             <li>HTML</li>
                             <li>CSS</li>
                             <li>JavaScript</li>
+                            <li>Python</li>
+                            <li>FastAPI</li>
                         </ul>
 
                         <div class="featured-project__actions">
@@ -633,6 +512,238 @@
                 </article>
 
             </section>
+
+            <!-- -- PERFIL PROFESIONAL -- -->
+            <section
+                class="profile section"
+                aria-label="Formación y herramientas"
+            >
+
+                <!-- -- FORMACIÓN -- -->
+                <article id="perfil" class="profile-panel">
+                    <header class="profile-panel__header">
+                        <p class="eyebrow">
+                            Formación
+                        </p>
+
+                        <h2 class="profile-panel__title">
+                            Estudios relevantes
+                        </h2>
+                    </header>
+
+                    <ul class="education-list">
+                        <li class="education-item">
+                            <div>
+                                <h3 class="education-item__title">
+                                    Tecnicatura en Programación
+                                </h3>
+
+                                <p class="education-item__institution">
+                                    Universidad Tecnológica Nacional
+                                </p>
+                            </div>
+
+                            <span class="status-badge">
+                                En curso
+                            </span>
+                        </li>
+
+                        <li class="education-item">
+                            <div>
+                                <h3 class="education-item__title">
+                                    Curso de Data Science
+                                </h3>
+
+                                <p class="education-item__institution">
+                                    Universidad Tecnológica Nacional
+                                </p>
+                            </div>
+
+                            <span class="status-badge">
+                                Completo
+                            </span>
+                        </li>
+                    </ul>
+                </article>
+
+                <!-- -- SKILLS -- -->
+                <article class="profile-panel">
+                    <header class="profile-panel__header">
+                        <p class="eyebrow">
+                            Skills
+                        </p>
+
+                        <h2 class="profile-panel__title">
+                            Herramientas principales
+                        </h2>
+                    </header>
+
+                    <ul class="skills-grid">
+                        <li
+                            class="skill-card"
+                            data-skill="excel"
+                        >
+                            <img
+                                class="skill-card__image"
+                                src="./assets/images/excel.png"
+                                alt=""
+                            >
+
+                            <span class="skill-card__label">
+                                Excel
+                            </span>
+                        </li>
+
+                        <li
+                            class="skill-card"
+                            data-skill="sql"
+                        >
+                            <img
+                                class="skill-card__image"
+                                src="./assets/images/sql.png"
+                                alt=""
+                            >
+
+                            <span class="skill-card__label">
+                                SQL
+                            </span>
+                        </li>
+
+                        <li
+                            class="skill-card"
+                            data-skill="mysql"
+                        >
+                            <img
+                                class="skill-card__image"
+                                src="./assets/images/mysql.png"
+                                alt=""
+                            >
+
+                            <span class="skill-card__label">
+                                MySQL
+                            </span>
+                        </li>
+
+                        <li
+                            class="skill-card"
+                            data-skill="powerbi"
+                        >
+                            <img
+                                class="skill-card__image"
+                                src="./assets/images/powerbi.png"
+                                alt=""
+                            >
+
+                            <span class="skill-card__label">
+                                Power BI
+                            </span>
+                        </li>
+
+                        <li
+                            class="skill-card"
+                            data-skill="python"
+                        >
+                            <img
+                                class="skill-card__image"
+                                src="./assets/images/python.png"
+                                alt=""
+                            >
+
+                            <span class="skill-card__label">
+                                Python
+                            </span>
+                        </li>
+                    </ul>
+                </article>
+            </section>
+
+<!-- -- CERTIFICADOS -- -->
+
+<article
+    id="certificados"
+    class="profile-panel certificate-panel"
+>
+    <header class="profile-panel__header">
+        <p class="eyebrow">
+            Certificados
+        </p>
+
+        <h2 class="profile-panel__title">
+            Certificaciones
+        </h2>
+    </header>
+
+    <ul class="certificates-list">
+
+        <li class="certificate-item">
+            <div>
+                <h3 class="certificate-item__title">
+                    Data Science
+                </h3>
+
+                <p class="certificate-item__institution">
+                    Universidad Tecnológica Nacional
+                </p>
+
+                        <ul
+                            class="technology-list"
+                            aria-label="Tecnologías utilizadas"
+                        >
+                            <li>Data Science</li>
+                            <li>Python</li>
+                            <li>Machine Learning</li>
+                            <li>Automatizaciones</li>
+                        </ul>
+            </div>
+
+            <div class="certificate-item__actions">
+                <a
+                    class="button button--secondary"
+                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Certificado en curso
+                </a>
+            </div>
+        </li>
+
+        <li class="certificate-item">
+            <div>
+                <h3 class="certificate-item__title">
+                    Data Analytics Essentials
+                </h3>
+
+                <p class="certificate-item__institution">
+                    Cisco Networking Academy
+                </p>
+
+                        <ul
+                            class="technology-list"
+                            aria-label="Tecnologías utilizadas"
+                        >
+                            <li>Data Analytics</li>
+                            <li>Data Storytelling</li>
+                            <li>SQL</li>
+                            <li>Python</li>
+                            <li>Excel</li>
+                        </ul>
+            </div>
+
+            <div class="certificate-item__actions">
+                <a
+                    class="button button--secondary"
+                    href="https://www.credly.com/badges/6736ed5c-7d70-400d-9433-dfce3be067ef/public_url"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Ver certificado
+                </a>
+            </div>
+        </li>
+
+    </ul>
+</article>
 
             <!-- -- CONTACTO -- -->
             <section
