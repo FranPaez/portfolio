@@ -1,89 +1,74 @@
-/* -- ELEMENTOS DE NAVEGACIÓN -- */
+"use strict";
 
-const navigationLinks = Array.from(
-    document.querySelectorAll(".sidebar__link")
-);
+// El catálogo sigue siendo visible si JavaScript no está disponible.
+const filterButtons = Array.from(document.querySelectorAll("[data-filter]"));
+const projectRows = Array.from(document.querySelectorAll(".project-row"));
+const filterStatus = document.querySelector("#filter-status");
 
-const navigationSections = navigationLinks
-    .map((link) => {
-        const sectionId = link.getAttribute("href");
+filterButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+        const filter = button.dataset.filter;
+        filterButtons.forEach((item) => {
+            const active = item === button;
+            item.classList.toggle("is-active", active);
+            item.setAttribute("aria-pressed", String(active));
+        });
+        let visibleCount = 0;
+        projectRows.forEach((row) => {
+            const visible = filter === "all" || row.dataset.category === filter;
+            row.hidden = !visible;
+            if (visible) {
+                visibleCount += 1;
+            }
+        });
+        const label = visibleCount === 1 ? "proyecto seleccionado" : "proyectos seleccionados";
+        filterStatus.textContent = `${visibleCount} ${label}`;
+    });
+});
 
-        if (!sectionId?.startsWith("#")) {
-            return null;
-        }
+const menuToggle = document.querySelector(".menu-toggle");
+const navigation = document.querySelector("#site-navigation");
+const navigationLinks = Array.from(navigation.querySelectorAll(".nav-link"));
+const studySectionHashes = new Set([
+    "#certificados",
+    "#tecnologias",
+    "#formacion-academica"
+]);
 
-        return document.querySelector(sectionId);
-    })
-    .filter(Boolean);
+function closeMenu() {
+    navigation.classList.remove("is-open");
+    menuToggle.setAttribute("aria-expanded", "false");
+}
 
+menuToggle.addEventListener("click", () => {
+    const open = menuToggle.getAttribute("aria-expanded") !== "true";
+    menuToggle.setAttribute("aria-expanded", String(open));
+    navigation.classList.toggle("is-open", open);
+});
 
-/* -- ESTADO ACTIVO -- */
+function updateActiveLink() {
+    const currentHash = window.location.hash || "#about";
+    const hash = studySectionHashes.has(currentHash) ? "#estudios" : currentHash;
 
-function setActiveLink(sectionId) {
     navigationLinks.forEach((link) => {
-        const isActive = link.getAttribute("href") === `#${sectionId}`;
-
-        link.classList.toggle("sidebar__link--active", isActive);
-
-        if (isActive) {
-            link.setAttribute("aria-current", "page");
+        const active = link.getAttribute("href") === hash;
+        link.classList.toggle("is-active", active);
+        if (active) {
+            link.setAttribute("aria-current", "location");
         } else {
             link.removeAttribute("aria-current");
         }
     });
 }
 
-
-/* -- DETECCIÓN DE SECCIONES -- */
-
-const visibleSections = new Map();
-
-const sectionObserver = new IntersectionObserver(
-    (entries) => {
-        entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-                visibleSections.set(entry.target.id, entry.intersectionRatio);
-            } else {
-                visibleSections.delete(entry.target.id);
-            }
-        });
-
-        if (visibleSections.size === 0) {
-            return;
-        }
-
-        const activeSectionId = Array.from(visibleSections.entries())
-            .sort((firstSection, secondSection) => {
-                return secondSection[1] - firstSection[1];
-            })[0][0];
-
-        setActiveLink(activeSectionId);
-    },
-    {
-        root: null,
-        rootMargin: "-20% 0px -55% 0px",
-        threshold: [0, 0.1, 0.25, 0.5, 0.75]
+navigationLinks.forEach((link) => link.addEventListener("click", closeMenu));
+document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && menuToggle.getAttribute("aria-expanded") === "true") {
+        closeMenu();
+        menuToggle.focus();
     }
-);
-
-
-/* -- OBSERVACIÓN -- */
-
-navigationSections.forEach((section) => {
-    sectionObserver.observe(section);
 });
+window.addEventListener("hashchange", updateActiveLink);
+window.matchMedia("(min-width: 1051px)").addEventListener("change", closeMenu);
 
-
-/* -- NAVEGACIÓN POR CLIC -- */
-
-navigationLinks.forEach((link) => {
-    link.addEventListener("click", () => {
-        const sectionId = link
-            .getAttribute("href")
-            ?.replace("#", "");
-
-        if (sectionId) {
-            setActiveLink(sectionId);
-        }
-    });
-});
+updateActiveLink();
